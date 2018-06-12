@@ -1,0 +1,17 @@
+import sqlite3
+from sqlite3 import*
+con=connect('db_file')
+# con.execute("CREATE TABLE CLASS_10(ID INT PRIMARY KEY NOT NULL,FIRST NAME TEXT NOT NULL,LAST NAME TEXT NOT NULL,ADDRESS TEXT NOT NULL, EMAIL ID CHAR(30));")
+# con.close
+con.execute("INSERT INTO CLASS_10(ID,FIRST_NAME,LAST_NAME,ADDRESS,EMAILID) \
+              VALUES(1,'SSS','RRR','AAA','C@GMAIL.COM')")
+con.execute("INSERT INTO CLASS_10(ID,FIRST_NAME,LAST_NAME,ADDRESS,EMAILID) \
+              VALUES(2,'SSS','RRR','AAA','C@GMAIL.COM')")
+con.execute("INSERT INTO CLASS_10(ID,FIRST_NAME,LAST_NAME,ADDRESS,EMAILID) \
+              VALUES(3,'SSS','RRR','AAA','C@GMAIL.COM')")
+con.execute("INSERT INTO CLASS_10(ID,FIRST_NAME,LAST_NAME,ADDRESS,EMAILID) \
+              VALUES(4,'SSS','RRR','AAA','C@GMAIL.COM')")
+
+a=con.execute("SELECT * from CLASS_10")
+con.commit()
+con.close()
